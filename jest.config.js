@@ -8,7 +8,10 @@ module.exports = {
     '!src/lib/registry.tsx',
     '!src/types/**',
     '!src/styles/**',
-    '!src/stories/**'
+    '!src/stories/**',
+    '!src/**/**.stories.tsx',
+    '!src/components/index.ts', //arquivo de exporter global
+    '!src/components/**/index.ts' // arquivo de esporte local
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/'],

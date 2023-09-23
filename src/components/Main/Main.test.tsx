@@ -1,11 +1,12 @@
 import { render, screen } from '@testing-library/react'
+
 import { Main } from '.'
 
-describe('<Main/>', () => {
+describe('<Main />', () => {
   it('should render the heading', () => {
-    const { container } = render(<Main text="Ola Main" />)
+    const { container } = render(<Main />)
 
-    expect(screen.getByText('Ola Main')).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Main/i })).toBeInTheDocument()
 
     expect(container.firstChild).toMatchSnapshot()
   })
